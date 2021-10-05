@@ -1,3 +1,52 @@
 @import "media-queries/tablet.scss";
 @import "media-queries/desktop.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
+$grey1: #1F2227;
+$grey2: #292E36;
+$grey3: #363F4A;
+$blue-text: #47B9D2;
+$gradient: linear-gradient(140deg, #721992 10%, #4F21BB 40%, #106D82 90%);
+
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+h1 {font-size: 6rem; font-weight: 700; text-transform: uppercase;}
+h2 {font-size: 4rem; font-weight: 700; text-transform: uppercase;}
+h3 {font-size: 3rem; font-weight: 400;}
+h4 {font-size: 2.5rem; font-weight: 400;}
+h5 {font-size: 1.8rem; font-weight: 400; color: $blue-text;}
+
+body, html {
+    background-color: $grey1;
+    color: white;
+    padding: 0 2rem;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    font-size: 62.5%;
+}
+header, section {font-size: 1.6rem;}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+nav {
+    font-size: 1.6rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    & .menu {
+        display: flex;
+        list-style-type: none;
+        &__link a {
+            text-decoration: none;
+            color: white;
+            margin-left: 5rem;
+        }
+        &__link:first-child a {
+            margin-left: 0;
+        }
+    }
+}
