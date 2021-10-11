@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+$grey1: #1F2227;
+$grey2: #292E36;
+$grey3: #363F4A;
+$blue-text: #47B9D2;
+$gradient: linear-gradient(140deg, #721992 10%, #4F21BB 40%, #106D82 90%);
+
+@mixin dflex($justify:center, $align:center, $direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+
+@keyframes move {
+    0%   { transform: scale(1)   translate(10px, -10px); }
+    40%  { transform: scale(0.8, 1) translate(-10px, 20px) rotate(10deg); }
+    70%  { transform: scale(0.8, 1) translate(0px, 10px) rotate(-5deg); }
+    100% { transform: scale(1)   translate(10px, -10px); }
+}

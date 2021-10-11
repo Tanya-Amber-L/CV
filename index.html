@@ -11,181 +11,215 @@
 		<header>
 			<nav>
 				<ul class="menu">
-					<li class="menu__link"><a href="">Skills</a></li>
-					<li class="menu__link"><a href="">Experience</a></li>
-					<li class="menu__link"><a href="">Portfolio</a></li>
-					<li class="menu__link"><a href="">Contact</a></li>
-					<li class="menu__link"><a href="">Download my CV</a></li>
+					<li class="menu__link"><a class="current" href="#skills">Skills</a></li>
+					<li class="menu__link"><a href="#exp">Experience</a></li>
+					<li class="menu__link"><a href="#portf">Portfolio</a></li>
+					<li class="menu__link"><a href="#contact">Contact</a></li>
+					<li class="menu__link"><a href="resources/Tanya Leenders CV.pdf" download>Download my CV</a></li>
 				</ul>
 			</nav>
+			<div class="blob-nav">
+				<svg height="230" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="gradient" gradientTransform="rotate(0)">
+							<stop offset="10%" stop-color="#721992" />
+							<stop offset="40%" stop-color="#4F21BB" />
+							<stop offset="90%" stop-color="#106D82" />
+						</linearGradient>
+					</defs>
+					<path fill="url(#gradient)" d="M37.8,-16.1C50.5,0.2,63.4,22.1,57.1,35.3C50.8,48.4,25.4,52.8,0.8,52.4C-23.9,51.9,-47.7,46.6,-56.9,31.8C-66.1,17,-60.6,-7.4,-48.7,-23.3C-36.8,-39.2,-18.4,-46.5,-2.9,-44.8C12.5,-43.1,25,-32.4,37.8,-16.1Z" transform="translate(100 100)" />
+				</svg>
+			</div>
 		</header>
 
-		<section>
-			<h1>Tanya Leenders</h1>
-			<h3>I’m a web developer</h3>
-			<p>
-				I’m a motivated young woman, infographist and web developer. I’m
-				seeking opportunities to make me grow in my professional and
-				personnal life. <br />
-				Currently, and since june, I’m working as a coach in web
-				development.
-			</p>
-			<div></div>
+		<section id="intro">
+			<div class="blob-intro">
+				<svg height="120vh" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+					<path fill="url(#gradient)" d="M53.1,-57C67.5,-51.2,76.8,-33.2,79.2,-14.7C81.5,3.8,76.8,22.7,65.9,34.8C55,46.9,37.9,52.1,20.7,59.5C3.4,67,-14,76.7,-31.7,75.4C-49.5,74.1,-67.4,61.7,-69.6,46C-71.8,30.3,-58.2,11.2,-53.8,-8.7C-49.4,-28.7,-54.2,-49.5,-46.8,-56.5C-39.3,-63.6,-19.7,-56.9,-0.1,-56.7C19.4,-56.5,38.7,-62.9,53.1,-57Z" transform="translate(100 100)" />
+				</svg>
+			</div>
+			<article class="intro-content">
+				<h1>Tanya<br>Leenders</h1>
+				<h3>I’m a web developer</h3>
+				<p>
+					I’m a motivated young woman, infographist and web developer. I’m
+					seeking opportunities to make me grow in my professional and
+					personnal life. <br>
+					Currently, and since june, I’m working as a coach in web
+					development.<br>
+					<a class="arrow" href="#skills"> > </a>
+				</p>
+			</article>
 		</section>
 
-		<section>
-			<h2>Skills</h2>
-			<h3>Technical</h3>
-			<h3>Graphic</h3>
-			<h3>Soft</h3>
-			<h3>Others</h3>
-			<article>
-				<h4>Languages</h4>
-				<div>
-					<img src="" alt="" />
-					<p>HTML</p>
+		<section id="skills">
+			<!-- <svg width="1" height="1" viewBox="0 0 1 1">
+				<defs>
+					<clipPath id="clip-path" clipPathUnits="objectBoundingBox">
+						<path d="M0.215374 0.0376334C0.106122 0.0613792 0.0838665 0.00531486 0 0.0376334V0.627699C0.0541565 0.680009 0.189567 0.62054 0.257232 0.613313C0.353077 0.603077 0.49162 0.642645 0.60459 0.627699C0.701599 0.614865 0.826773 0.591587 0.9 0.627699V0.0197381C0.89207 0.0129699 0.864638 -0.00558907 0.809217 0.0066606C0.737085 0.022604 0.583936 0.0673981 0.523227 0.0376334C0.387053 -0.0291302 0.355224 0.00723725 0.215374 0.0376334Z"/>
+					</clipPath>
+				</defs>
+			</svg> -->
+			<svg width="1" height="1" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0.215374 0.0376334C0.106122 0.0613792 0.0838665 0.00531486 0 0.0376334V0.627699C0.0541565 0.680009 0.189567 0.62054 0.257232 0.613313C0.353077 0.603077 0.49162 0.642645 0.60459 0.627699C0.701599 0.614865 0.826773 0.591587 0.9 0.627699V0.0197381C0.89207 0.0129699 0.864638 -0.00558907 0.809217 0.0066606C0.737085 0.022604 0.583936 0.0673981 0.523227 0.0376334C0.387053 -0.0291302 0.355224 0.00723725 0.215374 0.0376334Z" fill="#292E36"/>
+			</svg>
+			<article class="skills-content">
+				<h2>Skills</h2>
+				<div class="skills-content__nav">
+					<h3 class="skills-content__nav__btn">Technical</h3>
+					<h3 class="skills-content__nav__btn">Graphic</h3>
+					<h3 class="skills-content__nav__btn">Soft</h3>
+					<h3 class="skills-content__nav__btn">Others</h3>
 				</div>
-				<div>
-					<img src="" alt="" />
-					<p>CSS</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>JS</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>NodeJs</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>PHP</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>MySQL</p>
-				</div>
-
-				<h4>Environments</h4>
-				<div>
-					<img src="" alt="" />
-					<p>Git</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>Wordpress</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>React</p>
-				</div>
-
-				<h4>Others</h4>
-				<div>
-					<img src="" alt="" />
-					<p>Scss</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>Bootstrap</p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p>Tailwind</p>
-				</div>
-			</article>
-
-			<article>
-				<div>
-					<h4>Adobe Suite</h4>
+				<article class="skills-content__article">
+					<h4>Languages</h4>
 					<div>
 						<img src="" alt="" />
-						<p>Illustrator</p>
+						<p>HTML</p>
 					</div>
 					<div>
 						<img src="" alt="" />
-						<p>Photoshop</p>
+						<p>CSS</p>
 					</div>
 					<div>
 						<img src="" alt="" />
-						<p>InDesign</p>
-					</div>
-
-					<h4>Tools</h4>
-					<div>
-						<img src="" alt="" />
-						<p>Canva</p>
+						<p>JS</p>
 					</div>
 					<div>
 						<img src="" alt="" />
-						<p>Figma</p>
+						<p>NodeJs</p>
 					</div>
-				</div>
-				<div>
-					<h4>Visual Identity</h4>
-					<p>Logo</p>
-					<p>Packaging</p>
-					<p>Mockups</p>
-				</div>
-			</article>
+					<div>
+						<img src="" alt="" />
+						<p>PHP</p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p>MySQL</p>
+					</div>
 
-			<article>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-				<div>
-					<img src="" alt="" />
-					<p></p>
-				</div>
-			</article>
+					<h4>Environments</h4>
+					<div>
+						<img src="" alt="" />
+						<p>Git</p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p>Wordpress</p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p>React</p>
+					</div>
 
-			<article>
-				<div>
-					<h4>I speak...</h4>
+					<h4>Others</h4>
 					<div>
-						<progress max="100" value="100"></progress>
-						<p>French - Native Language</p>
+						<img src="" alt="" />
+						<p>Scss</p>
 					</div>
 					<div>
-						<progress max="100" value="90"></progress>
-						<p>English - Proficient, Level C2</p>
+						<img src="" alt="" />
+						<p>Bootstrap</p>
 					</div>
 					<div>
-						<progress max="100" value="20"></progress>
-						<p>Dutch - Learning, it’s in progress</p>
+						<img src="" alt="" />
+						<p>Tailwind</p>
 					</div>
-				</div>
-				<div>
-					<h4>My hobbies</h4>
-					<p>Marvel MCU</p>
-					<p>Music</p>
-					<p>Piano</p>
-				</div>
+				</article>
+
+				<article class="skills-content__article">
+					<div>
+						<h4>Adobe Suite</h4>
+						<div>
+							<img src="" alt="" />
+							<p>Illustrator</p>
+						</div>
+						<div>
+							<img src="" alt="" />
+							<p>Photoshop</p>
+						</div>
+						<div>
+							<img src="" alt="" />
+							<p>InDesign</p>
+						</div>
+
+						<h4>Tools</h4>
+						<div>
+							<img src="" alt="" />
+							<p>Canva</p>
+						</div>
+						<div>
+							<img src="" alt="" />
+							<p>Figma</p>
+						</div>
+					</div>
+					<div>
+						<h4>Visual Identity</h4>
+						<p>Logo</p>
+						<p>Packaging</p>
+						<p>Mockups</p>
+					</div>
+				</article>
+
+				<article class="skills-content__article">
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+					<div>
+						<img src="" alt="" />
+						<p></p>
+					</div>
+				</article>
+
+				<article class="skills-content__article">
+					<div>
+						<h4>I speak...</h4>
+						<div>
+							<progress max="100" value="100"></progress>
+							<p>French - Native Language</p>
+						</div>
+						<div>
+							<progress max="100" value="90"></progress>
+							<p>English - Proficient, Level C2</p>
+						</div>
+						<div>
+							<progress max="100" value="20"></progress>
+							<p>Dutch - Learning, it’s in progress</p>
+						</div>
+					</div>
+					<div>
+						<h4>My hobbies</h4>
+						<p>Marvel MCU</p>
+						<p>Music</p>
+						<p>Piano</p>
+					</div>
+				</article>
+
 			</article>
 		</section>
 
@@ -346,5 +380,7 @@
 			</nav>
 			<a href="">Downlaod My CV</a>
 		</section>
+
+		<script src="script.js"></script>
 	</body>
 </html>

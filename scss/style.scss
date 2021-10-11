@@ -1,52 +1,134 @@
 @import "media-queries/tablet.scss";
 @import "media-queries/desktop.scss";
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import "variables/variables.scss";
 
-$grey1: #1F2227;
-$grey2: #292E36;
-$grey3: #363F4A;
-$blue-text: #47B9D2;
-$gradient: linear-gradient(140deg, #721992 10%, #4F21BB 40%, #106D82 90%);
 
 * {
     padding: 0; margin: 0;
     box-sizing: border-box;
 }
-h1 {font-size: 6rem; font-weight: 700; text-transform: uppercase;}
+h1 {font-size: 6.5rem; font-weight: 700; text-transform: uppercase;}
 h2 {font-size: 4rem; font-weight: 700; text-transform: uppercase;}
-h3 {font-size: 3rem; font-weight: 400;}
+h3 {font-size: 3rem; font-weight: 700;}
 h4 {font-size: 2.5rem; font-weight: 400;}
 h5 {font-size: 1.8rem; font-weight: 400; color: $blue-text;}
 
 body, html {
     background-color: $grey1;
     color: white;
-    padding: 0 2rem;
     font-family: "Josefin Sans";
     font-weight: 300;
     font-size: 62.5%;
 }
 header, section {font-size: 1.6rem;}
 
+
+// HEADER
+
 header {
+    padding: 2rem;
     display: flex;
     justify-content: flex-end;
 }
+.blob-nav {
+    opacity: .5;
+    position: absolute;
+    top: -7rem;
+    right: -2rem;
+}
 nav {
+    z-index: 10;
     font-size: 1.6rem;
-    padding: 3rem 0;
-    border-bottom: 1px solid white;
-    width: fit-content;
+    font-weight: 700;
     & .menu {
         display: flex;
         list-style-type: none;
-        &__link a {
-            text-decoration: none;
-            color: white;
-            margin-left: 5rem;
+        &__link {
+            margin: 2rem;
         }
-        &__link:first-child a {
-            margin-left: 0;
+        &__link a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            position: relative;
+            transition: .5s;
+            &::after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 3px;
+                width: 0px;
+                background: transparent;
+                transition: all .5s ease;
+            }
+            &:hover::after {
+                width: 100%;
+                background: $blue-text;
+            }
+            // &:hover {color: white;}
+        }
+        &__link a:hover, &__link .current {color: white;}
+        &__link .current::after {width: 100%; background: $blue-text;}
+    }
+}
+
+// INTRO
+
+.blob-intro  {
+    position: absolute;
+    top: -25rem;
+    left: -60rem;
+    animation: move 15s ease-in-out infinite;
+    & svg {
+        transform: rotate(-35deg);
+        filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
+    }
+}
+#intro {
+    @include dflex(flex-end);
+    height: 90vh;
+    position: relative;
+    width: 75%;
+    margin: auto;
+    & .intro-content {
+        width: 50%;
+        & h1 {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            color: $blue-text;
+            mix-blend-mode: color-dodge;
+        }
+        & h3 {
+            color: $blue-text;
+            padding: 6rem 0 3rem 0;
+        }
+        & p {
+            font-size: 2rem;
+            line-height: 150%;
+            & .arrow {
+                width: 40px;
+                height: 40px;
+                transform: rotate(90deg);
+                border: 1px solid white;
+                border-radius: 50%;
+                @include dflex;
+                margin-top: 4rem;
+                text-decoration: none;
+                color: white;
+                transition: .5s;
+                &:hover {background-color: rgba(255, 255, 255, 0.2);}
+            }
         }
     }
+}
+
+
+// SKILLS
+
+#skills {
+    // background-color: $grey2;
+    // clip-path: url(#clip-path);
+    // width: 100%;
+    // height: auto;
+    & svg {display: block;}
 }
