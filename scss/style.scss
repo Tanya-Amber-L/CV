@@ -2,187 +2,246 @@
 @import "media-queries/desktop.scss";
 @import "variables/variables.scss";
 
-
 * {
-    padding: 0; margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-h1 {font-size: 7rem; font-weight: 700; text-transform: uppercase;}
-h2 {font-size: 4rem; font-weight: 700; text-transform: uppercase; color: $blue-text;}
-h3 {font-size: 3rem; font-weight: 700;}
-h4 {font-size: 2.5rem; font-weight: 400;}
-h5 {font-size: 1.8rem; font-weight: 400; color: $blue-text;}
-
-html {scroll-behavior: smooth;}
-body, html {
-    background-color: $grey1;
-    color: white;
-    font-family: "Josefin Sans";
-    font-weight: 300;
-    font-size: 62.5%;
-    overflow-x: hidden;
-    z-index: 0;
+h1 {
+	font-size: 7rem;
+	font-weight: 700;
+	text-transform: uppercase;
 }
-header, section {font-size: 1.6rem;}
+h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $blue-text;
+}
+h3 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+h4 {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+h5 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: $blue-text;
+}
 
+html {
+	scroll-behavior: smooth;
+}
+body,
+html {
+	background-color: $grey1;
+	color: white;
+	font-family: "Josefin Sans";
+	font-weight: 300;
+	font-size: 62.5%;
+	overflow-x: hidden;
+	z-index: 0;
+}
+header,
+section {
+	font-size: 1.6rem;
+}
 
 // HEADER
-
 header {
-    padding: 2rem;
-    display: flex;
-    justify-content: flex-end;
+	padding: 2rem;
+	display: flex;
+	justify-content: flex-end;
 }
 .blob-nav {
-    opacity: .5;
-    position: absolute;
-    top: -7rem;
-    right: -2rem;
+	opacity: 0.5;
+	position: absolute;
+	top: -7rem;
+	right: -2rem;
 }
 nav {
-    z-index: 10;
-    font-size: 1.8rem;
-    font-weight: 700;
-    & .menu {
-        display: flex;
-        list-style-type: none;
-        &__link {
-            margin: 2rem 3rem;
-        }
-        &__link a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            position: relative;
-            transition: .5s;
-            &::after {
-                content: '';
-                display: block;
-                margin: auto;
-                height: 3px;
-                width: 0px;
-                background: transparent;
-                transition: all .5s ease;
-            }
-            &:hover::after {
-                width: 100%;
-                background: $blue-text;
-            }
-            // &:hover {color: white;}
-        }
-        &__link a:hover, &__link .current {color: white;}
-        &__link .current::after {width: 100%; background: $blue-text;}
-    }
+	z-index: 10;
+	font-size: 1.8rem;
+	font-weight: 700;
+	& .menu {
+		display: flex;
+		list-style-type: none;
+		&__link {
+			margin: 2rem 3rem;
+		}
+		&__link a {
+			color: rgba(255, 255, 255, 0.5);
+			text-decoration: none;
+			position: relative;
+			transition: 0.5s;
+			&::after {
+				content: "";
+				display: block;
+				margin: auto;
+				height: 3px;
+				width: 0px;
+				background: transparent;
+				transition: all 0.5s ease;
+			}
+			&:hover::after {
+				width: 100%;
+				background: $blue-text;
+			}
+		}
+		&__link a:hover,
+		&__link .current {
+			color: white;
+		}
+		&__link .current::after {
+			width: 100%;
+			background: $blue-text;
+		}
+	}
 }
 
 // INTRO
-
-.blob-intro  {
-    position: absolute;
-    top: -25rem;
-    left: -60rem;
-    animation: move 15s ease-in-out infinite;
-    & svg {
-        transform: rotate(-35deg);
-        filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
-    }
+.blob-intro {
+	position: absolute;
+	top: -25rem;
+	left: -60rem;
+	animation: move 15s ease-in-out infinite;
+	& svg {
+		transform: rotate(-35deg);
+		filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
+	}
 }
 #intro {
-    @include dflex(flex-end, flex-end);
-    height: 65vh;
-    position: relative;
-    width: 80%;
-    margin: auto;
-    & .intro-content {
-        width: 50%;
-        & h1 {
-            position: absolute;
-            top: 10%;
-            left: 10%;
-            color: $blue-text;
-            mix-blend-mode: color-dodge;
-        }
-        & h3 {
-            color: $blue-text;
-            padding: 6rem 0 3rem 0;
-        }
-        & p {
-            font-size: 2rem;
-            line-height: 150%;
-            & .arrow {
-                width: 40px;
-                height: 40px;
-                transform: rotate(90deg);
-                border: 1px solid white;
-                border-radius: 50%;
-                @include dflex;
-                margin-top: 4rem;
-                text-decoration: none;
-                color: white;
-                transition: .5s;
-                &:hover {background-color: rgba(255, 255, 255, 0.2);}
-            }
-        }
-    }
+	@include dflex(flex-end, flex-end);
+	height: 65vh;
+	position: relative;
+	width: 80%;
+	margin: auto;
+	& .intro-content {
+		width: 50%;
+		& h1 {
+			position: absolute;
+			top: 10%;
+			left: 10%;
+			color: $blue-text;
+			mix-blend-mode: color-dodge;
+		}
+		& h3 {
+			color: $blue-text;
+			padding: 6rem 0 3rem 0;
+		}
+		& p {
+			font-size: 2rem;
+			line-height: 150%;
+			& .arrow {
+				width: 40px;
+				height: 40px;
+				transform: rotate(90deg);
+				border: 1px solid white;
+				border-radius: 50%;
+				@include dflex;
+				margin-top: 4rem;
+				text-decoration: none;
+				color: white;
+				transition: 0.5s;
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.2);
+				}
+			}
+		}
+	}
 }
-
 
 // SKILLS
-
 #skills {
-    background-color: $grey2;
-    // & svg {background-color: $grey1;}
+	background-color: $grey2;
+	& .section-svg {
+		background-color: $grey1;
+	}
 }
 .skills-content {
-    width: 80%;
-    margin: auto;
-    &__nav {
-        @include dflex(flex-start);
-        &__btn {padding-right: 2rem;}
-    }
+	width: 80%;
+	margin: auto;
+	&__nav {
+		@include dflex(flex-start);
+		margin: 5rem 0;
+		&__blob {
+			position: absolute;
+		}
+		&__btn {
+			padding: 0 2rem;
+			cursor: pointer;
+			z-index: 10;
+		}
+	}
+	&__article {
+		display: none;
+		// padding: 3rem 0 6rem 0;
+		&__title {
+			padding: 2rem 0;
+		}
+		&__items {
+			@include dflex(space-between);
+			flex-wrap: wrap;
+			width: 60%;
+			& div {
+				width: 30%;
+			}
+		}
+	}
+	& .show-content {
+		display: block;
+	}
 }
-
-
-// CUSTOM SCROLLBAR
-::-webkit-scrollbar {width: 10px;}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px grey;
-    border-radius: 5px;
-}
-::-webkit-scrollbar-thumb {
-    background: $gradient;
-    border-radius: 5px;
-    opacity: .5;
-}
-
 
 // EXPERIENCE
-
 #exp {
-    width: 80%;
-    margin: auto;
-    @include dflex(space-between);
-    
+	background-color: $grey3;
+	& .exp-svg {
+		background-color: $grey2;
+	}
 }
-.exp {
-    &__images {
-        position: relative;
-        & h2 {margin-bottom: 10rem;}
-        &__svg {
-            position: relative;
-            left: -15rem;
-            z-index: 10;
-        }
-        &__blob {
-            position: absolute;
-            left: -35rem;
-            top: 0;
-            & svg {
-                transform: rotate(100deg);
-                filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
-            }
-        }
-    }
-    &__accordion {
-        text-align: right;
-    }
+.exp-content {
+	width: 80%;
+	margin: auto;
+	@include dflex(space-between);
+	&__images {
+		position: relative;
+		& h2 {
+			margin-bottom: 10rem;
+		}
+		&__svg {
+			position: relative;
+			left: -15rem;
+			z-index: 10;
+		}
+		&__blob {
+			position: absolute;
+			left: -35rem;
+			top: 0;
+			& svg {
+				transform: rotate(100deg);
+				filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
+			}
+		}
+	}
+	&__accordion {
+		text-align: right;
+	}
+}
+
+// CUSTOM SCROLLBAR
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px grey;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: $gradient;
+	border-radius: 5px;
+	opacity: 0.5;
 }
