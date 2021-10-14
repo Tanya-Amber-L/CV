@@ -7,18 +7,21 @@
     padding: 0; margin: 0;
     box-sizing: border-box;
 }
-h1 {font-size: 6.5rem; font-weight: 700; text-transform: uppercase;}
-h2 {font-size: 4rem; font-weight: 700; text-transform: uppercase;}
+h1 {font-size: 7rem; font-weight: 700; text-transform: uppercase;}
+h2 {font-size: 4rem; font-weight: 700; text-transform: uppercase; color: $blue-text;}
 h3 {font-size: 3rem; font-weight: 700;}
 h4 {font-size: 2.5rem; font-weight: 400;}
 h5 {font-size: 1.8rem; font-weight: 400; color: $blue-text;}
 
+html {scroll-behavior: smooth;}
 body, html {
     background-color: $grey1;
     color: white;
     font-family: "Josefin Sans";
     font-weight: 300;
     font-size: 62.5%;
+    overflow-x: hidden;
+    z-index: 0;
 }
 header, section {font-size: 1.6rem;}
 
@@ -38,13 +41,13 @@ header {
 }
 nav {
     z-index: 10;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     & .menu {
         display: flex;
         list-style-type: none;
         &__link {
-            margin: 2rem;
+            margin: 2rem 3rem;
         }
         &__link a {
             color: rgba(255, 255, 255, 0.5);
@@ -84,10 +87,10 @@ nav {
     }
 }
 #intro {
-    @include dflex(flex-end);
-    height: 90vh;
+    @include dflex(flex-end, flex-end);
+    height: 65vh;
     position: relative;
-    width: 75%;
+    width: 80%;
     margin: auto;
     & .intro-content {
         width: 50%;
@@ -126,9 +129,27 @@ nav {
 // SKILLS
 
 #skills {
-    // background-color: $grey2;
-    // clip-path: url(#clip-path);
-    // width: 100%;
-    // height: auto;
-    & svg {display: block;}
+    background-color: $grey2;
+    // & svg {background-color: $grey1;}
+}
+.skills-content {
+    width: 80%;
+    margin: auto;
+    &__nav {
+        @include dflex(flex-start);
+        &__btn {padding-right: 2rem;}
+    }
+}
+
+
+// CUSTOM SCROLLBAR
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px grey;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: $gradient;
+    border-radius: 5px;
+    opacity: .5;
 }

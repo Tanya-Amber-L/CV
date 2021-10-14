@@ -20,7 +20,7 @@
 }
 
 h1 {
-  font-size: 6.5rem;
+  font-size: 7rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -29,6 +29,7 @@ h2 {
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
+  color: #47B9D2;
 }
 
 h3 {
@@ -47,12 +48,18 @@ h5 {
   color: #47B9D2;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   background-color: #1F2227;
   color: white;
   font-family: "Josefin Sans";
   font-weight: 300;
   font-size: 62.5%;
+  overflow-x: hidden;
+  z-index: 0;
 }
 
 header, section {
@@ -74,7 +81,7 @@ header {
 
 nav {
   z-index: 10;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 nav .menu {
@@ -82,7 +89,7 @@ nav .menu {
   list-style-type: none;
 }
 nav .menu__link {
-  margin: 2rem;
+  margin: 2rem 3rem;
 }
 nav .menu__link a {
   color: rgba(255, 255, 255, 0.5);
@@ -125,11 +132,11 @@ nav .menu__link .current::after {
 #intro {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
-  height: 90vh;
+  height: 65vh;
   position: relative;
-  width: 75%;
+  width: 80%;
   margin: auto;
 }
 #intro .intro-content {
@@ -169,6 +176,35 @@ nav .menu__link .current::after {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#skills svg {
-  display: block;
+#skills {
+  background-color: #292E36;
+}
+
+.skills-content {
+  width: 80%;
+  margin: auto;
+}
+.skills-content__nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.skills-content__nav__btn {
+  padding-right: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px grey;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(140deg, #721992 10%, #4F21BB 40%, #106D82 90%);
+  border-radius: 5px;
+  opacity: 0.5;
 }
