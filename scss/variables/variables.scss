@@ -27,6 +27,16 @@ $gradient: linear-gradient(140deg, #721992 10%, #4f21bb 40%, #106d82 90%);
 		transform: scale(1) translate(10px, -10px);
 	}
 }
+@keyframes slide-bottom {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
 @keyframes shake {
 	0%,
 	100% {

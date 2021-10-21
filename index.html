@@ -16,7 +16,7 @@
 			<nav>
 				<ul class="menu">
 					<li class="menu__link">
-						<a class="current" href="#skills-title">Skills</a>
+						<a href="#skills-title">Skills</a>
 					</li>
 					<li class="menu__link">
 						<a href="#exp-title">Experience</a>
@@ -24,7 +24,7 @@
 					<li class="menu__link">
 						<a href="#portf-title">Portfolio</a>
 					</li>
-					<li class="menu__link"><a href="#contact">Contact</a></li>
+					<li class="menu__link"><a href="#contact-title">Contact</a></li>
 					<li class="menu__link">
 						<a href="resources/Tanya Leenders CV.pdf" download
 							>Download my CV</a
@@ -89,7 +89,7 @@
 			<svg
 				class="section-svg"
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 1440 320"
+				viewBox="0 0 1440 290"
 			>
 				<path
 					fill="#292E36"
@@ -179,7 +179,10 @@
 							<p>Bootstrap</p>
 						</div>
 						<div class="skills-content__single-skill">
-							<i class="fab fa-bootstrap"></i>
+							<img
+								src="resources/tailwind.svg"
+								alt="tailwind logo"
+							/>
 							<p>Tailwind</p>
 						</div>
 					</div>
@@ -238,58 +241,46 @@
 				</article>
 
 				<article class="skills-content__article soft-article">
-					<div>
-						<img src="" alt="" />
-						<p></p>
+					<div class="skills-content__single-skill">
+						<i class="far fa-handshake"></i>
+						<p>Honest</p>
 					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
+					<div class="skills-content__single-skill">
+						<i class="fas fa-user-check"></i>
+						<p>Reliable</p>
 					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
+					<div class="skills-content__single-skill">
+						<i class="far fa-lightbulb"></i>
+						<p>Solution Oriented</p>
 					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
-					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
-					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
-					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
-					</div>
-					<div>
-						<img src="" alt="" />
-						<p></p>
+					<div class="skills-content__single-skill">
+						<i class="far fa-comments"></i>
+						<p>Change Enthusiast</p>
 					</div>
 				</article>
 
 				<article class="skills-content__article oth-article">
-					<div>
-						<h4>I speak...</h4>
-						<div>
+					<div class="left-div">
+						<h4 class="skills-content__article__title">
+							I speak...
+						</h4>
+						<div class="left-div__progress-container">
 							<progress max="100" value="100"></progress>
 							<p>French - Native Language</p>
 						</div>
-						<div>
+						<div class="left-div__progress-container">
 							<progress max="100" value="90"></progress>
 							<p>English - Proficient, Level C2</p>
 						</div>
-						<div>
+						<div class="left-div__progress-container">
 							<progress max="100" value="20"></progress>
 							<p>Dutch - Learning, it’s in progress</p>
 						</div>
 					</div>
-					<div>
-						<h4>My hobbies</h4>
+					<div class="right-div">
+						<h4 class="skills-content__article__title">
+							My hobbies
+						</h4>
 						<p>Marvel MCU</p>
 						<p>Music</p>
 						<p>Piano</p>
@@ -302,7 +293,7 @@
 			<svg
 				class="exp-svg"
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 1440 320"
+				viewBox="0 0 1440 300"
 			>
 				<path
 					fill="#363F4A"
@@ -442,7 +433,7 @@
 			<svg
 				class="portf-blob"
 				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 1440 320"
+				viewBox="0 0 1440 280"
 			>
 				<path
 					fill="#292E36"
@@ -466,10 +457,12 @@
 						<p>
 							<a
 								href="https://github.com/Tanya-Amber-L/Marketing-Agency-Design"
+								target="_blank"
 								><i class="fab fa-github"></i
 							></a>
 							<a
 								href="https://tanya-amber-l.github.io/Marketing-Agency-Design/"
+								target="_blank"
 							>
 								<i class="fas fa-external-link-alt"></i>
 							</a>
@@ -482,10 +475,12 @@
 						<p>
 							<a
 								href="https://github.com/Tanya-Amber-L/Blogr-landing-page"
+								target="_blank"
 								><i class="fab fa-github"></i
 							></a>
 							<a
 								href="https://tanya-amber-l.github.io/Blogr-landing-page/"
+								target="_blank"
 								><i class="fas fa-external-link-alt"></i
 							></a>
 						</p>
@@ -500,10 +495,12 @@
 						<p>
 							<a
 								href="https://github.com/Tanya-Amber-L/Tic-Tac-Toe"
+								target="_blank"
 								><i class="fab fa-github"></i
 							></a>
 							<a
 								href="https://tanya-amber-l.github.io/Tic-Tac-Toe/"
+								target="_blank"
 								><i class="fas fa-external-link-alt"></i
 							></a>
 						</p>
@@ -517,10 +514,14 @@
 							city of Liege.
 						</p>
 						<p>
-							<a href="https://github.com/Tanya-Amber-L/Mwenbwa"
+							<a
+								href="https://github.com/Tanya-Amber-L/Mwenbwa"
+								target="_blank"
 								><i class="fab fa-github"></i
 							></a>
-							<a href="https://tree-force.herokuapp.com/"
+							<a
+								href="https://tree-force.herokuapp.com/"
+								target="_blank"
 								><i class="fas fa-external-link-alt"></i
 							></a>
 						</p>
@@ -536,6 +537,7 @@
 						<p>
 							<a
 								href="https://github.com/Tanya-Amber-L/discord-bot"
+								target="_blank"
 								><i class="fab fa-github"></i
 							></a>
 						</p>
@@ -554,27 +556,27 @@
 							></a>
 						</p>
 					</div>
-					<!-- <div class="">
-						<img src="" alt="" />
-						<h5><span></span></h5>
-						<p></p>
-					</div> -->
 				</div>
 			</article>
 		</section>
 
-		<section>
-			<h2>Contact me</h2>
-			<nav>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-			</nav>
-			<a href="">Downlaod My CV</a>
+		<section id="contact">
+			<svg class="contact-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+				<path fill="#1f2227" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,106.7C384,117,480,107,576,96C672,85,768,75,864,69.3C960,64,1056,64,1152,80C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
+			<div class="contact-content">
+				<h2 class="contact-title">Contact me</h2>
+				<nav>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li><a href="resources/Tanya Leenders CV.pdf" download">Downlaod My CV</a></li>
+					</ul>
+				</nav>
+			</div>
 		</section>
 
 		<script src="script.js"></script>

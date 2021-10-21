@@ -17,6 +17,7 @@ h2 {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: $blue-text;
+	padding-top: 2rem;
 }
 h3 {
 	font-size: 3rem;
@@ -91,13 +92,8 @@ nav {
 				background: $blue-text;
 			}
 		}
-		&__link a:hover,
-		&__link .current {
+		&__link a:hover {
 			color: white;
-		}
-		&__link .current::after {
-			width: 100%;
-			background: $blue-text;
 		}
 	}
 }
@@ -195,8 +191,8 @@ nav {
 	& .tech-article {
 		flex-direction: column;
 	}
-	& .graph-article {
-		justify-content: flex-start;
+	& .graph-article,
+	.oth-article {
 		& .left-div {
 			padding-right: 3rem;
 			margin-right: 7rem;
@@ -209,13 +205,38 @@ nav {
 			}
 		}
 	}
+	& .oth-article {
+		& progress {
+			border-radius: 7px;
+			width: 100%;
+			height: 20px;
+		}
+		& progress::-webkit-progress-bar {
+			background-color: transparent;
+			border-radius: 7px;
+			border: 1px solid white;
+		}
+		& progress::-webkit-progress-value {
+			background-color: white;
+			border-radius: 5px;
+		}
+		& .left-div {
+			&__progress-container {
+				padding: 1rem 4rem 1rem 0;
+			}
+			& p {
+				padding: 1rem 0;
+			}
+		}
+	}
 	&__single-skill {
+		text-align: center;
 		width: 150px;
 		padding: 1rem 4rem;
 		@include dflex(center, center, column);
 		& i,
 		&__logo {
-			font-size: 5rem;
+			font-size: 4.5rem;
 			display: block;
 			height: 70px;
 			transition: 0.3s;
@@ -237,6 +258,7 @@ nav {
 	}
 	& .show-content {
 		display: flex;
+		animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	}
 }
 
@@ -250,14 +272,14 @@ nav {
 .exp-content {
 	width: 80%;
 	margin: auto;
-	@include dflex(space-between);
+	@include dflex(space-between, flex-start);
 	&__images {
 		position: relative;
 		& h2 {
 			margin-bottom: 10rem;
 		}
 		&__svg {
-			position: relative;
+			position: absolute;
 			left: -15rem;
 			z-index: 10;
 		}
@@ -276,6 +298,7 @@ nav {
 	text-align: right;
 	overflow: hidden;
 	padding: 5rem 0 10rem 0;
+	width: 60%;
 	&__tab {
 		width: 100%;
 		overflow: hidden;
@@ -295,13 +318,13 @@ nav {
 				width: 1em;
 				height: 1em;
 				text-align: center;
-				transition: all 0.4s;
+				transition: 0.9 all 0.4s;
 			}
 		}
 		& .tab-content {
 			max-height: 0;
 			padding: 0 1rem;
-			transition: 3s all 1s;
+			transition: all 0.3s;
 		}
 		& input {
 			position: absolute;
@@ -342,6 +365,10 @@ nav {
 	background-color: $grey2;
 	& .portf-blob {
 		background-color: $grey3;
+	}
+	& #portf-title {
+		width: 80%;
+		margin: auto;
 	}
 }
 .carousel {
@@ -404,6 +431,15 @@ nav {
 			opacity: 1;
 		}
 	}
+}
+
+// CONTACT
+.contact-svg {
+	background-color: $grey2;
+}
+.contact-content {
+	width: 80%;
+	margin: auto;
 }
 
 // CUSTOM SCROLLBAR
