@@ -108,10 +108,20 @@ section {
   font-size: 1.6rem;
 }
 
+header,
+#intro,
+.skills-content,
+.exp-content,
+#portf-title,
+.contact-content {
+  max-width: 1500px;
+}
+
 header {
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
+  margin: auto;
 }
 
 .blob-nav {
@@ -500,6 +510,36 @@ nav .menu__link a:hover {
 .contact-content {
   width: 80%;
   margin: auto;
+  margin-bottom: 5rem;
+}
+.contact-content nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-content__list {
+  width: 80%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 7rem;
+}
+.contact-content__list__item a, .contact-content__list ~ a {
+  color: white;
+  font-size: 3.5rem;
+}
+.contact-content__list__item a:hover > i, .contact-content__list ~ a:hover > i {
+  transform: scale(1.3);
+}
+.contact-content__list ~ a {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.contact-content__list__item i {
+  transition: 0.3s;
 }
 
 ::-webkit-scrollbar {

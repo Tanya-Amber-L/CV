@@ -1,5 +1,5 @@
 @import "media-queries/tablet.scss";
-@import "media-queries/desktop.scss";
+@import "media-queries/phone.scss";
 @import "variables/variables.scss";
 
 * {
@@ -50,12 +50,21 @@ header,
 section {
 	font-size: 1.6rem;
 }
+header,
+#intro,
+.skills-content,
+.exp-content,
+#portf-title,
+.contact-content {
+	max-width: 1500px;
+}
 
 // HEADER
 header {
 	padding: 2rem;
 	display: flex;
 	justify-content: flex-end;
+	margin: auto;
 }
 .blob-nav {
 	opacity: 0.5;
@@ -114,6 +123,7 @@ nav {
 	height: 65vh;
 	position: relative;
 	width: 80%;
+	// max-width: 1500px;
 	margin: auto;
 	& .intro-content {
 		width: 50%;
@@ -440,6 +450,33 @@ nav {
 .contact-content {
 	width: 80%;
 	margin: auto;
+	margin-bottom: 5rem;
+	& nav {
+		@include dflex(center, center, column);
+	}
+	&__list {
+		width: 80%;
+		list-style-type: none;
+		@include dflex(space-between);
+		padding: 7rem;
+		&__item a,
+		& ~ a {
+			color: white;
+			font-size: 3.5rem;
+			&:hover {
+				> i {
+					transform: scale(1.3);
+				}
+			}
+		}
+		& ~ a {
+			font-size: 1.8rem;
+			text-decoration: none;
+		}
+		&__item i {
+			transition: 0.3s;
+		}
+	}
 }
 
 // CUSTOM SCROLLBAR
