@@ -1,0 +1,45 @@
+@media only screen and (max-width: 980px) {
+	body,
+	html {
+		font-size: 55%;
+	}
+
+	// HEADER
+	.blob-nav {
+		transform: scale(0.8);
+		top: -9rem;
+		right: 0;
+	}
+
+	// INTRO
+	.blob-intro svg {
+		height: 110vh;
+	}
+
+	// EXPERIENCE
+	.exp-content__images__svg {
+		transform: scale(0.7);
+		left: -20rem;
+	}
+
+	// PORTFOLIO
+	.carousel__cell {
+		width: 75%;
+		padding: 0 2.5rem;
+	}
+
+	// CONTACT
+	.contact-content__list {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#intro,
+	.skills-content,
+	.exp-content,
+	#portf-title,
+	.contact-content {
+		width: 90%;
+	}
+}

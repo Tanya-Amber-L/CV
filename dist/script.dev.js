@@ -28,16 +28,27 @@ var resetClasses = function resetClasses() {
   skillsBtns.forEach(function (button) {
     button.classList.remove("content-clicked");
   });
-}; // MOVE BLOB TO MOUSE CLICK POSITION IN THE SKILLS NAV CONTAINER
-// const skillsNavContainer = document.getElementById("skills-nav");
-// const skillsNavBlob = document.getElementById("skills-blob");
-// skillsNavContainer.addEventListener("click", (event) => {
-// 	console.log(event);
-// 	let rect = event.target.getBoundingClientRect();
-// 	let x = event.clientX - rect.left;
-// 	let y = event.clientY - rect.top;
-// 	skillsNavBlob.style.left = `${x}px`;
-// 	skillsNavBlob.style.top = `${y}px`;
-// });
-// 365
-// 122
+}; // MOVE BLOB TO BTN CLICKED SKILLS SECTION
+
+
+var moveBlobToButton = function moveBlobToButton() {
+  var skillsTechBtn = document.getElementById("skills-tech-btn");
+  var skillsGraphBtn = document.getElementById("skills-graph-btn");
+  var skillsSoftBtn = document.getElementById("skills-soft-btn");
+  var skillsOthBtn = document.getElementById("skills-oth-btn");
+  var blob = document.getElementById("skills-blob");
+  skillsTechBtn.addEventListener("click", function () {
+    return blob.style.left = "0";
+  });
+  skillsGraphBtn.addEventListener("click", function () {
+    return blob.style.left = "17rem";
+  });
+  skillsSoftBtn.addEventListener("click", function () {
+    return blob.style.left = "30rem";
+  });
+  skillsOthBtn.addEventListener("click", function () {
+    return blob.style.left = "42rem";
+  });
+};
+
+moveBlobToButton();

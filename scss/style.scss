@@ -1,5 +1,3 @@
-@import "media-queries/tablet.scss";
-@import "media-queries/phone.scss";
 @import "variables/variables.scss";
 
 * {
@@ -70,7 +68,6 @@ header {
 	opacity: 0.5;
 	position: absolute;
 	top: -7rem;
-	right: -2rem;
 }
 nav {
 	z-index: 10;
@@ -114,6 +111,7 @@ nav {
 	left: -60rem;
 	animation: move 15s ease-in-out infinite;
 	& svg {
+		height: 120vh;
 		transform: rotate(-35deg);
 		filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 	}
@@ -123,7 +121,6 @@ nav {
 	height: 65vh;
 	position: relative;
 	width: 80%;
-	// max-width: 1500px;
 	margin: auto;
 	& .intro-content {
 		width: 50%;
@@ -176,6 +173,7 @@ nav {
 		width: 550px;
 		position: relative;
 		&__blob {
+			transition: all 0.5s ease-in-out;
 			position: absolute;
 		}
 		&__btn {
@@ -297,6 +295,7 @@ nav {
 			position: absolute;
 			left: -35rem;
 			top: -5rem;
+			animation: move 15s ease-in-out infinite;
 			& svg {
 				transform: rotate(100deg);
 				filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
@@ -492,3 +491,7 @@ nav {
 	border-radius: 5px;
 	opacity: 0.5;
 }
+
+// MEDIA QUERIES IMPORTS
+@import "media-queries/tablet.scss";
+@import "media-queries/phone.scss";

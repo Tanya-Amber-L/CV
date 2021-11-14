@@ -128,7 +128,6 @@ header {
   opacity: 0.5;
   position: absolute;
   top: -7rem;
-  right: -2rem;
 }
 
 nav {
@@ -173,6 +172,7 @@ nav .menu__link a:hover {
   animation: move 15s ease-in-out infinite;
 }
 .blob-intro svg {
+  height: 120vh;
   transform: rotate(-35deg);
   filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 }
@@ -245,6 +245,7 @@ nav .menu__link a:hover {
   position: relative;
 }
 .skills-content__nav__blob {
+  transition: all 0.5s ease-in-out;
   position: absolute;
 }
 .skills-content__nav__btn {
@@ -365,6 +366,7 @@ nav .menu__link a:hover {
   position: absolute;
   left: -35rem;
   top: -5rem;
+  animation: move 15s ease-in-out infinite;
 }
 .exp-content__images__blob svg {
   transform: rotate(100deg);
@@ -555,4 +557,44 @@ nav .menu__link a:hover {
   background: linear-gradient(140deg, #721992 10%, #4f21bb 40%, #106d82 90%);
   border-radius: 5px;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 980px) {
+  body,
+html {
+    font-size: 55%;
+  }
+
+  .blob-nav {
+    transform: scale(0.8);
+    top: -9rem;
+    right: 0;
+  }
+
+  .blob-intro svg {
+    height: 110vh;
+  }
+
+  .exp-content__images__svg {
+    transform: scale(0.7);
+    left: -20rem;
+  }
+
+  .carousel__cell {
+    width: 75%;
+    padding: 0 2.5rem;
+  }
+
+  .contact-content__list {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #intro,
+.skills-content,
+.exp-content,
+#portf-title,
+.contact-content {
+    width: 90%;
+  }
 }
