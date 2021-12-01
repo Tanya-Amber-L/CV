@@ -69,7 +69,7 @@ header {
 	position: absolute;
 	top: -7rem;
 }
-nav {
+.main-nav {
 	@include dflex(center, center, column);
 	z-index: 100;
 	font-size: 1.8rem;
@@ -146,6 +146,7 @@ nav {
 	margin: auto;
 	& .intro-content {
 		width: 50%;
+		z-index: 10;
 		& h1 {
 			position: absolute;
 			top: 10%;

@@ -1,0 +1,32 @@
+@media only screen and (max-width: 568px) {
+	body,
+	html {
+		font-size: 45%;
+	}
+
+	//INTRO
+	#intro {
+		height: 70vh;
+		& .intro-content {
+			width: 100%;
+			& h1 {
+				position: unset;
+			}
+		}
+	}
+
+	//SKILLS
+	.skills-content__single-skill {
+		width: 100px;
+		padding: 3rem 0;
+		& i,
+		&__logo {
+			height: 50px;
+		}
+	}
+
+	// PORTFOLIO
+	.carousel__cell {
+		width: 100%;
+	}
+}

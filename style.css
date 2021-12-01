@@ -130,7 +130,7 @@ header {
   top: -7rem;
 }
 
-nav {
+.main-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,21 +139,21 @@ nav {
   font-size: 1.8rem;
   font-weight: 700;
 }
-nav .menu {
+.main-nav .menu {
   display: flex;
   list-style-type: none;
 }
-nav .menu__link {
+.main-nav .menu__link {
   margin: 2rem 3rem;
   width: fit-content;
 }
-nav .menu__link a {
+.main-nav .menu__link a {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   position: relative;
   transition: 0.5s;
 }
-nav .menu__link a::after {
+.main-nav .menu__link a::after {
   content: "";
   display: block;
   margin: auto;
@@ -162,11 +162,11 @@ nav .menu__link a::after {
   background: transparent;
   transition: all 0.5s ease;
 }
-nav .menu__link a:hover::after {
+.main-nav .menu__link a:hover::after {
   width: 100%;
   background: #47b9d2;
 }
-nav .menu__link a:hover {
+.main-nav .menu__link a:hover {
   color: white;
 }
 
@@ -211,6 +211,7 @@ nav .menu__link a:hover {
 }
 #intro .intro-content {
   width: 50%;
+  z-index: 10;
 }
 #intro .intro-content h1 {
   position: absolute;
@@ -626,7 +627,11 @@ html {
     padding: 0 0 2rem 2rem;
   }
 
-  nav {
+  .blob-nav {
+    right: -9rem;
+  }
+
+  .main-nav {
     position: fixed;
   }
 
@@ -683,8 +688,32 @@ html {
     padding-top: 0;
     width: 100%;
   }
+}
+@media only screen and (max-width: 568px) {
+  body,
+html {
+    font-size: 45%;
+  }
 
-  .blob-nav {
-    right: -9rem;
+  #intro {
+    height: 70vh;
+  }
+  #intro .intro-content {
+    width: 100%;
+  }
+  #intro .intro-content h1 {
+    position: unset;
+  }
+
+  .skills-content__single-skill {
+    width: 100px;
+    padding: 3rem 0;
+  }
+  .skills-content__single-skill i, .skills-content__single-skill__logo {
+    height: 50px;
+  }
+
+  .carousel__cell {
+    width: 100%;
   }
 }

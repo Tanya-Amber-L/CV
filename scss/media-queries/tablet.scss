@@ -43,10 +43,14 @@
 		width: 90%;
 	}
 
+	// HEADER
 	header {
 		padding: 0 0 2rem 2rem;
 	}
-	nav {
+	.blob-nav {
+		right: -9rem;
+	}
+	.main-nav {
 		position: fixed;
 	}
 	.menu {
@@ -79,6 +83,7 @@
 		}
 	}
 
+	// EXPERIENCE
 	.exp-content {
 		flex-direction: column;
 		&__images h2 {
@@ -99,8 +104,5 @@
 	.exp-content__accordion {
 		padding-top: 0;
 		width: 100%;
-	}
-	.blob-nav {
-		right: -9rem;
 	}
 }
