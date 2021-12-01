@@ -131,7 +131,11 @@ header {
 }
 
 nav {
-  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -141,6 +145,7 @@ nav .menu {
 }
 nav .menu__link {
   margin: 2rem 3rem;
+  width: fit-content;
 }
 nav .menu__link a {
   color: rgba(255, 255, 255, 0.5);
@@ -163,6 +168,23 @@ nav .menu__link a:hover::after {
 }
 nav .menu__link a:hover {
   color: white;
+}
+
+.ham {
+  display: none;
+  padding: 3rem;
+  cursor: pointer;
+}
+.ham .bar1, .ham .bar2, .ham .bar3 {
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+.ham:hover > .bar1, .ham:hover > .bar2, .ham:hover > .bar3 {
+  background-color: white;
 }
 
 .blob-intro {
@@ -369,6 +391,7 @@ nav .menu__link a:hover {
   animation: move 15s ease-in-out infinite;
 }
 .exp-content__images__blob svg {
+  height: 80vh;
   transform: rotate(100deg);
   filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 }
@@ -376,8 +399,9 @@ nav .menu__link a:hover {
 .exp-content__accordion {
   text-align: right;
   overflow: hidden;
-  padding: 5rem 0 10rem 0;
+  padding: 7rem 0 10rem 0;
   width: 60%;
+  z-index: 10;
 }
 .exp-content__accordion__tab {
   width: 100%;
@@ -559,10 +583,10 @@ nav .menu__link a:hover {
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1024px) {
   body,
 html {
-    font-size: 55%;
+    font-size: 50%;
   }
 
   .blob-nav {
@@ -581,8 +605,8 @@ html {
   }
 
   .carousel__cell {
-    width: 75%;
-    padding: 0 2.5rem;
+    width: 85%;
+    padding: 0 1rem;
   }
 
   .contact-content__list {
@@ -596,5 +620,71 @@ html {
 #portf-title,
 .contact-content {
     width: 90%;
+  }
+
+  header {
+    padding: 0 0 2rem 2rem;
+  }
+
+  nav {
+    position: fixed;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 12rem;
+    background-color: #292e36;
+    height: 100vh;
+    transition: transform 0.3s ease-in;
+    transform: translate(100%);
+  }
+
+  .show-nav-content {
+    transform: translate(0%);
+  }
+
+  .ham {
+    display: block;
+    z-index: 100;
+  }
+
+  .ham-clicked .bar1 {
+    transform: rotate(45deg) translate(8px, 3px);
+  }
+  .ham-clicked .bar2 {
+    opacity: 0;
+  }
+  .ham-clicked .bar3 {
+    transform: rotate(-45deg) translate(8px, -3px);
+  }
+
+  .exp-content {
+    flex-direction: column;
+  }
+  .exp-content__images h2 {
+    margin-bottom: 0;
+  }
+  .exp-content__images__svg {
+    left: -13rem;
+    position: relative;
+  }
+  .exp-content__images__blob {
+    left: 0;
+    top: 0;
+  }
+  .exp-content__images__blob svg {
+    height: 60vh;
+  }
+
+  .exp-content__accordion {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .blob-nav {
+    right: -9rem;
   }
 }

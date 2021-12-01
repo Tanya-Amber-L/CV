@@ -33,3 +33,11 @@ const moveBlobToButton = () => {
 	skillsOthBtn.addEventListener("click", () => (blob.style.left = "42rem"));
 };
 moveBlobToButton();
+
+// HAM MENU
+const hamburger = document.querySelector(".ham");
+const navContent = document.querySelector(".menu");
+hamburger.addEventListener("click", () => {
+	hamburger.classList.toggle("ham-clicked");
+	navContent.classList.toggle("show-nav-content");
+});

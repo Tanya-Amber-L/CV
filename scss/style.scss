@@ -70,7 +70,8 @@ header {
 	top: -7rem;
 }
 nav {
-	z-index: 10;
+	@include dflex(center, center, column);
+	z-index: 100;
 	font-size: 1.8rem;
 	font-weight: 700;
 	& .menu {
@@ -78,6 +79,7 @@ nav {
 		list-style-type: none;
 		&__link {
 			margin: 2rem 3rem;
+			width: fit-content;
 		}
 		&__link a {
 			color: rgba(255, 255, 255, 0.5);
@@ -101,6 +103,26 @@ nav {
 		&__link a:hover {
 			color: white;
 		}
+	}
+}
+.ham {
+	display: none;
+	padding: 3rem;
+	cursor: pointer;
+	& .bar1,
+	& .bar2,
+	& .bar3 {
+		display: block;
+		width: 35px;
+		height: 3px;
+		margin: 5px auto;
+		background-color: rgba(255, 255, 255, 0.5);
+		transition: 0.4s;
+	}
+	&:hover > .bar1,
+	&:hover > .bar2,
+	&:hover > .bar3 {
+		background-color: white;
 	}
 }
 
@@ -297,6 +319,7 @@ nav {
 			top: -5rem;
 			animation: move 15s ease-in-out infinite;
 			& svg {
+				height: 80vh;
 				transform: rotate(100deg);
 				filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 			}
@@ -306,8 +329,9 @@ nav {
 .exp-content__accordion {
 	text-align: right;
 	overflow: hidden;
-	padding: 5rem 0 10rem 0;
+	padding: 7rem 0 10rem 0;
 	width: 60%;
+	z-index: 10;
 	&__tab {
 		width: 100%;
 		overflow: hidden;

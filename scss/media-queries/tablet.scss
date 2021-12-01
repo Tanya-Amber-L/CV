@@ -1,7 +1,7 @@
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1024px) {
 	body,
 	html {
-		font-size: 55%;
+		font-size: 50%;
 	}
 
 	// HEADER
@@ -24,8 +24,8 @@
 
 	// PORTFOLIO
 	.carousel__cell {
-		width: 75%;
-		padding: 0 2.5rem;
+		width: 85%;
+		padding: 0 1rem;
 	}
 
 	// CONTACT
@@ -41,5 +41,66 @@
 	#portf-title,
 	.contact-content {
 		width: 90%;
+	}
+
+	header {
+		padding: 0 0 2rem 2rem;
+	}
+	nav {
+		position: fixed;
+	}
+	.menu {
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding-top: 12rem;
+		background-color: $grey2;
+		height: 100vh;
+		transition: transform 0.3s ease-in;
+		transform: translate(100%);
+	}
+	.show-nav-content {
+		transform: translate(0%);
+	}
+	.ham {
+		display: block;
+		z-index: 100;
+	}
+	.ham-clicked {
+		& .bar1 {
+			transform: rotate(45deg) translate(8px, 3px);
+		}
+		& .bar2 {
+			opacity: 0;
+		}
+		& .bar3 {
+			transform: rotate(-45deg) translate(8px, -3px);
+		}
+	}
+
+	.exp-content {
+		flex-direction: column;
+		&__images h2 {
+			margin-bottom: 0;
+		}
+		&__images__svg {
+			left: -13rem;
+			position: relative;
+		}
+		&__images__blob {
+			left: 0;
+			top: 0;
+			& svg {
+				height: 60vh;
+			}
+		}
+	}
+	.exp-content__accordion {
+		padding-top: 0;
+		width: 100%;
+	}
+	.blob-nav {
+		right: -9rem;
 	}
 }

@@ -51,4 +51,11 @@ var moveBlobToButton = function moveBlobToButton() {
   });
 };
 
-moveBlobToButton();
+moveBlobToButton(); // HAM MENU
+
+var hamburger = document.querySelector(".ham");
+var navContent = document.querySelector(".menu");
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("ham-clicked");
+  navContent.classList.toggle("show-nav-content");
+});
