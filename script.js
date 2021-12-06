@@ -43,9 +43,6 @@ const moveBlobToButton = () => {
 		blob.style.left = skillsOthBtn.offsetLeft - 20;
 		blob.style.top = skillsOthBtn.offsetTop - 50;
 	});
-	skillsOthBtn.addEventListener("click", () =>
-		console.log(skillsOthBtn.offsetTop)
-	);
 };
 moveBlobToButton();
 
