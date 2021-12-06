@@ -134,6 +134,7 @@ header {
 	animation: move 15s ease-in-out infinite;
 	& svg {
 		height: 120vh;
+		max-height: 110rem;
 		transform: rotate(-35deg);
 		filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 	}
@@ -141,6 +142,7 @@ header {
 #intro {
 	@include dflex(flex-end, flex-end);
 	height: 65vh;
+	max-height: 90rem;
 	position: relative;
 	width: 80%;
 	margin: auto;
@@ -321,6 +323,7 @@ header {
 			animation: move 15s ease-in-out infinite;
 			& svg {
 				height: 80vh;
+				max-height: 90rem;
 				transform: rotate(100deg);
 				filter: drop-shadow(20px 30px 50px rgba(0, 0, 0, 0.5));
 			}
