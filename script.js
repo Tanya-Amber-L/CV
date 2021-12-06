@@ -27,10 +27,25 @@ const moveBlobToButton = () => {
 	const skillsOthBtn = document.getElementById("skills-oth-btn");
 	const blob = document.getElementById("skills-blob");
 
-	skillsTechBtn.addEventListener("click", () => (blob.style.left = "0"));
-	skillsGraphBtn.addEventListener("click", () => (blob.style.left = "17rem"));
-	skillsSoftBtn.addEventListener("click", () => (blob.style.left = "30rem"));
-	skillsOthBtn.addEventListener("click", () => (blob.style.left = "42rem"));
+	skillsTechBtn.addEventListener("click", () => {
+		blob.style.left = skillsTechBtn.offsetLeft - 20;
+		blob.style.top = skillsTechBtn.offsetTop - 50;
+	});
+	skillsGraphBtn.addEventListener("click", () => {
+		blob.style.left = skillsGraphBtn.offsetLeft - 20;
+		blob.style.top = skillsGraphBtn.offsetTop - 50;
+	});
+	skillsSoftBtn.addEventListener("click", () => {
+		blob.style.left = skillsSoftBtn.offsetLeft - 30;
+		blob.style.top = skillsSoftBtn.offsetTop - 50;
+	});
+	skillsOthBtn.addEventListener("click", () => {
+		blob.style.left = skillsOthBtn.offsetLeft - 20;
+		blob.style.top = skillsOthBtn.offsetTop - 50;
+	});
+	skillsOthBtn.addEventListener("click", () =>
+		console.log(skillsOthBtn.offsetTop)
+	);
 };
 moveBlobToButton();
 

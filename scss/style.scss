@@ -194,15 +194,15 @@ header {
 	margin: auto;
 	&__nav {
 		@include dflex(flex-start);
+		flex-wrap: wrap;
 		margin: 5rem 0;
-		width: 550px;
 		position: relative;
 		&__blob {
 			transition: all 0.5s ease-in-out;
 			position: absolute;
 		}
 		&__btn {
-			padding: 0 2rem;
+			padding: 2rem;
 			cursor: pointer;
 			z-index: 10;
 		}

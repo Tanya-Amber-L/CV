@@ -265,8 +265,8 @@ header {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 5rem 0;
-  width: 550px;
   position: relative;
 }
 .skills-content__nav__blob {
@@ -274,7 +274,7 @@ header {
   position: absolute;
 }
 .skills-content__nav__btn {
-  padding: 0 2rem;
+  padding: 2rem;
   cursor: pointer;
   z-index: 10;
 }
@@ -647,7 +647,7 @@ html {
     background-color: #292e36;
     height: 100vh;
     transition: transform 0.3s ease-in;
-    transform: translate(100%);
+    transform: translate(200%);
   }
 
   .show-nav-content {

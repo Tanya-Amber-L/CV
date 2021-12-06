@@ -38,16 +38,23 @@ var moveBlobToButton = function moveBlobToButton() {
   var skillsOthBtn = document.getElementById("skills-oth-btn");
   var blob = document.getElementById("skills-blob");
   skillsTechBtn.addEventListener("click", function () {
-    return blob.style.left = "0";
+    blob.style.left = skillsTechBtn.offsetLeft - 20;
+    blob.style.top = skillsTechBtn.offsetTop - 50;
   });
   skillsGraphBtn.addEventListener("click", function () {
-    return blob.style.left = "17rem";
+    blob.style.left = skillsGraphBtn.offsetLeft - 20;
+    blob.style.top = skillsGraphBtn.offsetTop - 50;
   });
   skillsSoftBtn.addEventListener("click", function () {
-    return blob.style.left = "30rem";
+    blob.style.left = skillsSoftBtn.offsetLeft - 30;
+    blob.style.top = skillsSoftBtn.offsetTop - 50;
   });
   skillsOthBtn.addEventListener("click", function () {
-    return blob.style.left = "42rem";
+    blob.style.left = skillsOthBtn.offsetLeft - 20;
+    blob.style.top = skillsOthBtn.offsetTop - 50;
+  });
+  skillsOthBtn.addEventListener("click", function () {
+    return console.log(skillsOthBtn.offsetTop);
   });
 };
 
