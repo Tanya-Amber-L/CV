@@ -24,6 +24,16 @@
 			height: 50px;
 		}
 	}
+	.graph-article.show-content,
+	.oth-article.show-content {
+		flex-direction: column;
+		& .left-div {
+			padding-right: 0;
+			padding-bottom: 1rem;
+			margin-right: 0;
+			border-right: 0;
+		}
+	}
 
 	// PORTFOLIO
 	.carousel__cell {

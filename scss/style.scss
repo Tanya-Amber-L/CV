@@ -254,14 +254,12 @@ header {
 		transition: width 1s;
 		max-width: auto;
 		display: none;
-		// padding: 3rem 0 6rem 0;
 		&__title {
 			padding: 2rem 0;
 		}
 		&__items {
 			@include dflex(flex-start);
 			flex-wrap: wrap;
-			// width: 60%;
 		}
 	}
 	& .tech-article {

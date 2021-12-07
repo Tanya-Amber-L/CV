@@ -759,6 +759,18 @@ html {
     height: 50px;
   }
 
+  .graph-article.show-content,
+.oth-article.show-content {
+    flex-direction: column;
+  }
+  .graph-article.show-content .left-div,
+.oth-article.show-content .left-div {
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-right: 0;
+    border-right: 0;
+  }
+
   .carousel__cell {
     width: 100%;
   }
