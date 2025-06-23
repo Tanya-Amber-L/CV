@@ -137,7 +137,7 @@ header,
 }
 
 .animation {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #1f2227;
@@ -345,6 +345,13 @@ header {
   background-color: #1f2227;
 }
 
+#skills-blob {
+	position: absolute;
+	transition: left 0.3s ease, top 0.3s ease;
+	left: 0px;
+	top: -50px;
+}
+
 .skills-content {
   width: 80%;
   margin: auto;
@@ -522,7 +529,7 @@ header {
 .exp-content__accordion {
   text-align: right;
   overflow: hidden;
-  padding: 7rem 0 10rem 0;
+  padding: 9rem 0 10rem 0;
   width: 60%;
   z-index: 10;
 }
@@ -554,9 +561,10 @@ header {
 }
 
 .exp-content__accordion__tab .tab-content {
-  max-height: 0;
   padding: 0 1rem;
-  transition: all 0.3s;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease, padding 0.4s ease;
 }
 
 .exp-content__accordion__tab input {
@@ -574,12 +582,7 @@ header {
   transform: rotate(90deg);
 }
 
-.exp-content__accordion__tab input:checked~.tab-content {
-  max-height: 100vh;
-  padding: 1em;
-}
-
-.tab-content h5 {
+.exp-content__accordion__tab .tab-content h5 {
   padding: 3rem 0 1rem 0;
 }
 
@@ -604,8 +607,14 @@ header {
   margin: auto;
 }
 
+#portf .portf-subtitle {
+  padding-top: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
 .carousel {
-  padding: 5rem 0;
+  padding: 7rem 0;
 }
 
 .carousel__cell {

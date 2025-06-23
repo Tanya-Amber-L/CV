@@ -19,32 +19,29 @@ const resetClasses = () => {
 };
 
 // MOVE BLOB TO BTN CLICKED SKILLS SECTION
-
 const moveBlobToButton = () => {
-	const skillsTechBtn = document.getElementById("skills-tech-btn");
-	const skillsGraphBtn = document.getElementById("skills-graph-btn");
-	const skillsSoftBtn = document.getElementById("skills-soft-btn");
-	const skillsOthBtn = document.getElementById("skills-oth-btn");
 	const blob = document.getElementById("skills-blob");
 
-	skillsTechBtn.addEventListener("click", () => {
-		blob.style.left = skillsTechBtn.offsetLeft - 20;
-		blob.style.top = skillsTechBtn.offsetTop - 50;
-	});
-	skillsGraphBtn.addEventListener("click", () => {
-		blob.style.left = skillsGraphBtn.offsetLeft - 20;
-		blob.style.top = skillsGraphBtn.offsetTop - 50;
-	});
-	skillsSoftBtn.addEventListener("click", () => {
-		blob.style.left = skillsSoftBtn.offsetLeft - 30;
-		blob.style.top = skillsSoftBtn.offsetTop - 50;
-	});
-	skillsOthBtn.addEventListener("click", () => {
-		blob.style.left = skillsOthBtn.offsetLeft - 20;
-		blob.style.top = skillsOthBtn.offsetTop - 50;
+	const buttons = [
+		document.getElementById("skills-tech-btn"),
+		document.getElementById("skills-graph-btn"),
+		document.getElementById("skills-oth-btn")
+	];
+
+	buttons.forEach((btn) => {
+		btn?.addEventListener("click", () => {
+			const rect = btn.getBoundingClientRect();
+			const parentRect = btn.offsetParent?.getBoundingClientRect() || { left: 0, top: 0 };
+
+			const left = rect.left - parentRect.left;
+			const top = rect.top - parentRect.top - 50;
+
+			blob.style.left = `${left}px`;
+			blob.style.top = `${top}px`;
+		});
 	});
 };
-moveBlobToButton();
+document.addEventListener("DOMContentLoaded", moveBlobToButton);
 
 // HAM MENU
 const hamburger = document.querySelector(".ham");
@@ -53,3 +50,28 @@ hamburger.addEventListener("click", () => {
 	hamburger.classList.toggle("ham-clicked");
 	navContent.classList.toggle("show-nav-content");
 });
+
+
+// ACCORDION
+function updateAccordion() {
+	const allTabContents = document.querySelectorAll('.tab-content');
+	const checkedRadio = document.querySelector('.exp-content__accordion__tab input:checked');
+
+	allTabContents.forEach((tab) => {
+		tab.style.maxHeight = null;
+		tab.style.padding = '0 1rem';
+	});
+
+	if (checkedRadio) {
+		const tabContent = checkedRadio.parentElement.querySelector('.tab-content');
+		tabContent.style.padding = '1rem'; 
+		tabContent.style.maxHeight = (tabContent.scrollHeight + 50) + 'px';
+	}
+}
+
+const radioButtons = document.querySelectorAll('.exp-content__accordion__tab input[type="radio"]');
+radioButtons.forEach((radio) => {
+	radio.addEventListener('change', updateAccordion);
+});
+
+window.addEventListener('DOMContentLoaded', updateAccordion);

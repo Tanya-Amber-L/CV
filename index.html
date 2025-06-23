@@ -17,9 +17,9 @@
 	</head>
 
 	<body>
-		<div class="animation">
+		<!-- <div class="animation">
 			<img class="animation__logo" src="./resources/logo.svg" alt="logo">
-		</div>
+		</div> -->
 
 		<header>
 			<nav class="main-nav">
@@ -36,7 +36,7 @@
 						<a href="#exp-title">Experience</a>
 					</li>
 					<li class="menu__link">
-						<a href="#portf-title">Portfolio</a>
+						<a href="#portf-title">Work</a>
 					</li>
 					<li class="menu__link"><a href="#contact-title">Contact</a></li>
 					<li class="menu__link">
@@ -129,57 +129,24 @@
 					</svg>
 					<h3 id="skills-tech-btn" class="skills-content__nav__btn">Technical</h3>
 					<h3 id="skills-graph-btn" class="skills-content__nav__btn">Graphic</h3>
-					<h3 id="skills-soft-btn" class="skills-content__nav__btn">Soft</h3>
 					<h3 id="skills-oth-btn" class="skills-content__nav__btn">Others</h3>
 				</div>
 				<article
 					class="skills-content__article tech-article show-content"
 				>
-					<h4 class="skills-content__article__title">Languages</h4>
-					<div class="skills-content__article__items">
-						<div class="skills-content__single-skill">
-							<i class="fab fa-html5"></i>
-							<p>HTML</p>
-						</div>
-						<div class="skills-content__single-skill">
-							<i class="fab fa-css3-alt"></i>
-							<p>CSS</p>
-						</div>
-						<div class="skills-content__single-skill">
-							<i class="fab fa-js-square"></i>
-							<p>JavaScript</p>
-						</div>
-						<div class="skills-content__single-skill">
-							<img src="./resources/typescript.svg" alt="TS">
-							<p>TypeScript</p>
-						</div>
-					</div>
-
-					<h4 class="skills-content__article__title">Environments</h4>
+					<h4 class="skills-content__article__title">Main Techs</h4>
 					<div class="skills-content__article__items">
 						<div class="skills-content__single-skill">
 							<i class="fab fa-git-alt"></i>
 							<p>Git</p>
 						</div>
 						<div class="skills-content__single-skill">
+							<img src="./resources/typescript.svg" alt="TS">
+							<p>TypeScript</p>
+						</div>
+						<div class="skills-content__single-skill">
 							<img src="./resources/vue.svg" alt="Vue">
 							<p>VueJs</p>
-						</div>
-						<div class="skills-content__single-skill">
-							<img src="./resources/strapi.svg" alt="Strapi">
-							<p>Strapi</p>
-						</div>
-					</div>
-
-					<h4 class="skills-content__article__title">Others</h4>
-					<div class="skills-content__article__items">
-						<div class="skills-content__single-skill">
-							<i class="fab fa-sass"></i>
-							<p>Scss</p>
-						</div>
-						<div class="skills-content__single-skill">
-							<i class="fab fa-bootstrap"></i>
-							<p>Bootstrap</p>
 						</div>
 						<div class="skills-content__single-skill">
 							<img
@@ -193,9 +160,7 @@
 
 				<article class="skills-content__article graph-article">
 					<div class="left-div">
-						<h4 class="skills-content__article__title">
-							Adobe Suite
-						</h4>
+						<h4 class="skills-content__article__title">Tools</h4>
 						<div class="skills-content__article__items">
 							<div class="skills-content__single-skill">
 								<p class="skills-content__single-skill__logo">
@@ -203,10 +168,6 @@
 								</p>
 								<p>Illustrator</p>
 							</div>
-						</div>
-
-						<h4 class="skills-content__article__title">Tools</h4>
-						<div class="skills-content__article__items">
 							<div class="skills-content__single-skill">
 								<img
 									src="resources/canva.png"
@@ -230,25 +191,6 @@
 					</div>
 				</article>
 
-				<article class="skills-content__article soft-article">
-					<div class="skills-content__single-skill">
-						<i class="far fa-handshake"></i>
-						<p>Reliable</p>
-					</div>
-					<div class="skills-content__single-skill">
-						<i class="fas fa-user-check"></i>
-						<p>Communciation</p>
-					</div>
-					<div class="skills-content__single-skill">
-						<i class="far fa-lightbulb"></i>
-						<p>Solution Oriented</p>
-					</div>
-					<div class="skills-content__single-skill">
-						<i class="far fa-comments"></i>
-						<p>Change Enthusiast</p>
-					</div>
-				</article>
-
 				<article class="skills-content__article oth-article">
 					<div class="left-div">
 						<h4 class="skills-content__article__title">
@@ -259,8 +201,8 @@
 							<p>French - Native Language</p>
 						</div>
 						<div class="left-div__progress-container">
-							<progress max="100" value="95"></progress>
-							<p>English - Proficient, Level C1/C2</p>
+							<progress max="100" value="98"></progress>
+							<p>English - Proficient, Level C2</p>
 						</div>
 						<div class="left-div__progress-container">
 							<progress max="100" value="33"></progress>
@@ -313,18 +255,6 @@
 					</div>
 				</div>
 				<div class="exp-content__accordion">
-					<article class="exp-content__accordion__tab">
-						<input type="radio" id="1" name="radio" />
-						<label for="1"> <h4>Diplomas</h4> </label>
-						<div class="tab-content">
-							<article>
-								<h5>
-									Infographist Diploma<span> - 06.2020</span>
-								</h5>
-								<p>At the “Athénée Royal de Visé”</p>
-							</article>
-						</div>
-					</article>
 					<article class="exp-content__accordion__tab">
 						<input type="radio" id="2" name="radio" />
 						<label for="2"> <h4>Internships</h4> </label>
@@ -414,7 +344,7 @@
 									>
 								</h5>
 								<p>
-									Client projects using mainly VueJs, Typescript. <br> Also used NuxtJs, Strapi.
+									Client projects using mainly VueJs, Typescript. <br> Also used NuxtJs, Strapi, Wordpress.
 								</p>
 							</article>
 						</div>
@@ -436,74 +366,33 @@
 				></path>
 			</svg>
 			<article class="portf-content">
-				<h2 id="portf-title">Portfolio</h2>
+				<h2 id="portf-title">Work</h2>
+				<p class="portf-subtitle">For most projects, public links are not available, as these are in majority internal tools used by companies.</p>
+
 				<div
 					class="carousel js-flickity"
 					data-flickity-options='{ "wrapAround": true }'
 				>
 					<div class="carousel__cell">
-						<img src="resources/craith.png" alt="Craith" />
 						<h5>Craith website & webshop<span> - VueJS 3, Tailwind, Typescript</span></h5>
 						<p>
-							2023. Developed the website and webshop in VueJS. Construction of a user portal with orders and personal informations. Design on Figma
-						</p>
-						<p>
-							<a href="https://craithlab.com/en"
-								><i class="fas fa-external-link-alt"></i
-							></a>
+							2023. I developed the website and webshop in VueJS. I also constructed a user portal with orders and personal informations. Designs were built by my colleagues with Figma.
 						</p>
 					</div>
 					<div class="carousel__cell">
-						<img src="resources/pomodoro.jpg" alt="Pomodoro" />
-						<h5>Pomodoro Timer<span> - React, StyledComponents</span></h5>
+						<h5>Website for a Horeca organisation<span> - VueJS 3, Strapi</span></h5>
 						<p>
-							Octobre 2021. Small Pomodoro timer using React hooks, and deploying on Netlify.
-						</p>
-						<p>
-							<a
-							href="https://github.com/Tanya-Amber-L/Pomodoro-Timer"
-								target="_blank"
-								><i class="fab fa-github"></i
-							></a>
-							<a href="https://react-pom-timer.netlify.app"
-								><i class="fas fa-external-link-alt"></i
-							></a>
+							2023. I build a website with fully custom sections via the Strapi interface, with the content being rendered in VueJS.
 						</p>
 					</div>
 					<div class="carousel__cell">
-						<img src="resources/blogr.jpg" alt="blog design" />
-						<h5>Blogr Landing page<span> - Bootstrap</span></h5>
-						<p>June 2021. FrontEndMentor challenge, using Bootstrap.</p>
+						<h5>Trixxo<span> - VueJS 3, Tailwind, Typescript</span></h5>
 						<p>
-							<a
-								href="https://github.com/Tanya-Amber-L/Blogr-landing-page"
-								target="_blank"
-								><i class="fab fa-github"></i
-							></a>
-							<a
-								href="https://tanya-amber-l.github.io/Blogr-landing-page/"
-								target="_blank"
-								><i class="fas fa-external-link-alt"></i
-							></a>
-						</p>
-					</div>
-					<div class="carousel__cell">
-						<img src="resources/mwenbwa.jpg" alt="mwenwa webapp" />
-						<h5>Mwenbwa Game<span> - React, MongoDB</span></h5>
-						<p>
-							March 2021. IDLE Game where players can buy trees with leaves.
-							Each tree comes from actual coordinates from the
-							city of Liege.
+							2023/2024. At the beginning of the project, I helped build and improve the internal platform used by TRIXO to manage and coordinate thousands of domestic helpers across Belgium. This is the biggest team of developers I have worked with.
 						</p>
 						<p>
 							<a
-								href="https://github.com/Tanya-Amber-L/Mwenbwa"
-								target="_blank"
-							>
-								<i class="fab fa-github"></i>
-							</a>
-							<a
-								href="https://tree-force.herokuapp.com/"
+								href="https://wisemen.digital/case/trixxo/"
 								target="_blank"
 							>
 								<i class="fas fa-external-link-alt"></i>
@@ -511,13 +400,51 @@
 						</p>
 					</div>
 					<div class="carousel__cell">
-						<img src="resources/design-challenge.jpg" alt="Design Challenges" />
-						<h5>Design Challenges<span> - Pure CSS/JS</span></h5>
+						<h5>Groenblauwpeil<span> - VueJS 3, Tailwind, Typescript</span></h5>
 						<p>
-							2021-2022. Codepen Collection of little challenges
+							2023/2024. On this interactive online platform, me and a colleague built a tool that helps homeowners, municipalities, and businesses evaluate how climate-resilient their property is. It's already been used by over 50,000 users across Flanders!
 						</p>
 						<p>
-							<a href="https://codepen.io/collection/aMeyKK"><i class="fab fa-codepen"></i></a>
+							<a
+								href="https://groenblauwpeil.be/"
+								target="_blank"
+							>
+								<i class="fas fa-external-link-alt"></i>
+							</a>
+						</p>
+					</div>
+					<div class="carousel__cell">
+						<h5>IN-Z<span> - VueJS 3, Tailwind, Typescript</span></h5>
+						<p>
+							2024. I contributed to the development of IN-Z's internal web platform, built to help local governments streamline the management and communication of school allowance applications.
+						</p>
+						<p>
+							<a
+								href="https://wisemen.digital/case/in-z/"
+								target="_blank"
+							>
+								<i class="fas fa-external-link-alt"></i>
+							</a>
+						</p>
+					</div>
+					<div class="carousel__cell">
+						<h5>Nannic<span> - WordPress, Css</span></h5>
+						<p>
+							2024. Even though Wordpress is not my favorite technology to work with, I was still able to help a Wordpress expert within Wisemen to build this website/webshop, using Divi builder.
+						</p>
+						<p>
+							<a
+								href="https://nannic.com/"
+								target="_blank"
+							>
+								<i class="fas fa-external-link-alt"></i>
+							</a>
+						</p>
+					</div>
+					<div class="carousel__cell">
+						<h5>Internal tool for Jaga<span> - VueJS 3, Tailwind, Typescript</span></h5>
+						<p>
+							2024/2025. I build a website with fully custom sections via the Strapi interface, with the content being rendered in VueJS.
 						</p>
 					</div>
 				</div>
@@ -532,9 +459,6 @@
 				<h2 id="contact-title">Contact me</h2>
 				<nav>
 					<ul class="contact-content__list">
-						<li class="contact-content__list__item">
-							<a href="https://codepen.io/tanya-amber-l"><i class="fab fa-codepen"></i></a>
-						</li>
 						<li class="contact-content__list__item">
 							<a href="https://github.com/Tanya-Amber-L"><i class="fab fa-github"></i></a>
 						</li>
